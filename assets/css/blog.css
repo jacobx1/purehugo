@@ -30,7 +30,7 @@ h3 {
 }
 
 .sidebar {
-    background: rgb(61, 79, 93);
+    background: #000;
     color: #fff;
 }
 
@@ -108,6 +108,7 @@ h3 {
     font-family: Georgia, "Cambria", serif;
     color: #444;
     line-height: 1.8em;
+    max-width: 960px;
 }
 .post-meta {
     color: #999;
