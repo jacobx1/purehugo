@@ -1,7 +1,8 @@
 var gulp = require('gulp')
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
-	minifyCSS = require('gulp-minify-css');
+  minifyCSS = require('gulp-minify-css'),
+  watch = require('gulp-watch');
 
 gulp.task('compress', function() {
   gulp.src(['assets/js/jquery.min.js', 'assets/js/jquery.prettysocial.min.js', 'assets/js/rainbow-custom.min.js', 'assets/js/scripts.js'])
@@ -12,4 +13,8 @@ gulp.task('compress', function() {
     .pipe(concat('all.min.css'))
     .pipe(minifyCSS())
     .pipe(gulp.dest('static/css/'));
+});
+
+gulp.task('watch', () => {
+  gulp.watch('assets/**', ['compress']);
 });
